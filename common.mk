@@ -266,13 +266,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor
 
-# FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    init.qti.fm.sh \
-    qcom.fmradio
-
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files
