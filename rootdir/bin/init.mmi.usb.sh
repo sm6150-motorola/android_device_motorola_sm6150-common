@@ -442,7 +442,7 @@ case "$bootmode" in
             ;;
         esac
 
-        adb_early=`getprop ro.boot.adb_early`
+        adb_early="1"
         if [ "$adb_early" == "1" ]; then
             echo 0 > /sys/class/android_usb/android0/secure
             log_info "Enabling enumeration after bootup, count =  $count !"
