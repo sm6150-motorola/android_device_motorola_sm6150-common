@@ -5,3 +5,6 @@ get_prop(vendor_rmt_storage, vendor_radio_prop)
 get_prop(vendor_rmt_storage, moto_boot_prop)
 
 allow vendor_rmt_storage vendor_modem_block_device:blk_file { open read write };
+allow vendor_rmt_storage unlabeled: { file lnk_file } read;
+allow vendor_rmt_storage vendor_persist_rfs_file:dir search;
+allow vendor_rmt_storage vendor_persist_rfs_file:file rw_file_perms;

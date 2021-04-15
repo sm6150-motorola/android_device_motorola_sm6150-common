@@ -9,6 +9,10 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.q
 # PowerHal
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp                      u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable               u:object_r:sysfs_scsi_devices_0000:s0
+genfscon sysfs /devices/virtual/input/input1/dt-gesture/enable                  u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/virtual/input/input2/dt-gesture/enable                  u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/virtual/input/input3/dt-gesture/enable                  u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/virtual/input/input4/dt-gesture/enable                  u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/virtual/input/input5/dt-gesture/enable                  u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/virtual/input/input6/dt-gesture/enable                  u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/virtual/input/input7/dt-gesture/enable                  u:object_r:vendor_sysfs_sensors:s0
@@ -23,12 +27,10 @@ genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display/dsi_display_acl       
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc            u:object_r:sysfs_livedisplay_tuneable:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm             u:object_r:sysfs_livedisplay_tuneable:s0
 
-# Vibrator
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-01/c440000.qcom,spmi:qcom,pm6150@1:qcom,vibrator@5300/leds/vibrator      u:object_r:sysfs_vibrator:s0
-
 # Health
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5-mmi/power_supply u:object_r:sysfs_battery_supply:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5/power_supply     u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/soc:mmi_chrg_manager/power_supply/mmi_chrg_manager                                                u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0065/power_supply/bq2597x-standalone                                           u:object_r:sysfs_battery_supply:s0
 
 # VL53L1
 genfscon sysfs /devices/virtual/laser/stmvl53l1                                 u:object_r:vendor_sysfs_laser:s0
@@ -36,3 +38,9 @@ genfscon sysfs /module/stmvl53l1                                                
 
 # Motorola
 genfscon proc /bootinfo                                                         u:object_r:proc_moto_boot:s0
+
+# Touch
+genfscon sysfs /devices/platform/soc/a80000.spi/spi_master/spi2/spi2.0          u:object_r:vendor_sysfs_touch:s0
+
+# Thermal
+genfscon sysfs /devices/virtual/hwmon                                           u:object_r:sysfs_hwmon:s0
