@@ -957,7 +957,7 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # WiFi
-vendor/bin/cnss-daemon
+vendor/bin/cnss-daemon|695b73b2a0fe5e2cdd2fac881fe15826907e25c9
 vendor/bin/wifilearner
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 vendor/etc/wifi/aoa_cldb_falcon.bin
