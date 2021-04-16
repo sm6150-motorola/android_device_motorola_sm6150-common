@@ -52,3 +52,10 @@ vendor.hw.fingerprint.status                   u:object_r:moto_fingerprint_prop:
 
 # Motorola touch
 vendor.hw.touch.           u:object_r:moto_touch_prop:s0
+
+# Motorola Camera
+camera.mot.is.coming.cts            u:object_r:moto_camera_prop:s0 exact string
+camera.mot.is.coming.aosp           u:object_r:moto_camera_prop:s0 exact string
+camera.mot.is.client.foreground     u:object_r:moto_camera_prop:s0 exact string
+camera.mot.rc_id                    u:object_r:moto_camera_prop:s0 exact int
+camera.mot.mod_id                   u:object_r:moto_camera_prop:s0 exact
