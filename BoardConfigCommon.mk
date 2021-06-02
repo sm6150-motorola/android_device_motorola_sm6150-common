@@ -88,6 +88,7 @@ TARGET_MODULE_ALIASES += \
     wcd_spi_dlkm.ko:audio_wcd_spi.ko \
     wglink_dlkm.ko:audio_wglink.ko \
     wsa881x_dlkm.ko:audio_wsa881x.ko \
+    irq-madera.ko:cirrus_irq-madera.ko \
     wsa_macro_dlkm.ko:audio_wsa_macro.ko
 
 # Kernel modules - WLAN

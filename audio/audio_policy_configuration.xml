@@ -3,7 +3,7 @@
     <!-- version section contains a “version” tag in the form “major.minor” e.g version=”1.0” -->
 
     <!-- Global configuration Decalaration -->
-    <globalConfiguration speaker_drc_enabled="false" call_screen_mode_supported="true"/>
+    <globalConfiguration speaker_drc_enabled="false"/>
 
     <!-- Modules section:
         There is one section per audio HW module present on the platform.
@@ -81,9 +81,12 @@
                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK,AUDIO_CHANNEL_INDEX_MASK_3,AUDIO_CHANNEL_INDEX_MASK_4"/>
                 </mixPort>
                 <mixPort name="fm input" role="sink">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="44100,48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
+                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK,AUDIO_CHANNEL_IN_AMBISONIC,AUDIO_CHANNEL_INDEX_MASK_3,AUDIO_CHANNEL_INDEX_MASK_4"/>
+                     <profile name="" format="AUDIO_FORMAT_PCM_8_24_BIT"
+                              samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
+                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK,AUDIO_CHANNEL_IN_AMBISONIC,AUDIO_CHANNEL_INDEX_MASK_3,AUDIO_CHANNEL_INDEX_MASK_4"/>
                 </mixPort>
                 <mixPort name="voice_rx" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
@@ -163,11 +166,11 @@
                 <route type="mix" sink="Line Out"
                        sources="primary output,deep_buffer,compressed_offload"/>
                 <route type="mix" sink="BT SCO"
-                       sources="primary output,deep_buffer"/>
+                       sources="primary output,deep_buffer,compressed_offload"/>
                 <route type="mix" sink="BT SCO Headset"
-                       sources="primary output,deep_buffer"/>
+                       sources="primary output,deep_buffer,compressed_offload"/>
                 <route type="mix" sink="BT SCO Car Kit"
-                       sources="primary output,deep_buffer"/>
+                       sources="primary output,deep_buffer,compressed_offload"/>
                 <route type="mix" sink="BT A2DP Out"
                        sources="primary output,deep_buffer,compressed_offload"/>
                 <route type="mix" sink="BT A2DP Headphones"
@@ -186,8 +189,58 @@
                        sources="Telephony Rx"/>
                 <route type="mix" sink="primary input"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,USB Device In,USB Headset In"/>
-                <route type="mix" sink="fm input" sources="FM tuner"/>
+                <route type="mix" sink="fm input"
+                       sources="FM tuner"/>
                 <route type="mix" sink="hifi_input" sources="USB Device In,USB Headset In" />
+            </routes>
+        </module>
+
+        <module name="vx_motvr" halVersion="2.0">
+            <mixPorts>
+                <mixPort name="primary input" role="sink" flags="AUDIO_INPUT_FLAG_HW_HOTWORD">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="16000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO"/>
+                </mixPort>
+                <mixPort name="trigger" role="sink" flags="AUDIO_INPUT_FLAG_HW_HOTWORD|AUDIO_INPUT_FLAG_CAPTURE_TRIGGER_AUDIO">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="16000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO"/>
+                </mixPort>
+            </mixPorts>
+            <devicePorts>
+                <devicePort tagName="Built-In Mic" type="AUDIO_DEVICE_IN_BUILTIN_MIC" role="source" address="bottom">
+                </devicePort>
+                <devicePort tagName="Wired Headset Mic" type="AUDIO_DEVICE_IN_WIRED_HEADSET" role="source">
+                </devicePort>
+            </devicePorts>
+            <routes>
+                <route type="mix" sink="primary input"
+                       sources="Built-In Mic,Wired Headset Mic"/>
+                <route type="mix" sink="trigger"
+                       sources="Built-In Mic,Wired Headset Mic"/>
+            </routes>
+        </module>
+
+        <!-- A2dp Audio HAL -->
+        <module name="a2dp" halVersion="2.0">
+            <mixPorts>
+                <mixPort name="a2dp input" role="sink">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="44100,48000" channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
+                </mixPort>
+            </mixPorts>
+
+            <devicePorts>
+                <devicePort tagName="BT A2DP In" type="AUDIO_DEVICE_IN_BLUETOOTH_A2DP" role="source">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="44100,48000" channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
+                </devicePort>
+            </devicePorts>
+
+            <routes>
+                <route type="mix" sink="a2dp input"
+                       sources="BT A2DP In"/>
             </routes>
         </module>
 
