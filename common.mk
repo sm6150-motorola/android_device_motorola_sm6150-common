@@ -441,6 +441,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0 \
+    android.frameworks.sensorservice@1.0.vendor \
     libsensorndkbridge
 
 # Servicetracker
