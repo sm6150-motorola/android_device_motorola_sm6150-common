@@ -22,6 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/motorola/sm6150-common/sm6150-common-vendor.mk)
+$(call inherit-product, $(LOCAL_PATH)/interfaces.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
