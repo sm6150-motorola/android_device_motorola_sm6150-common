@@ -341,10 +341,10 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.0-service-sysfs.motorola_sm6150
+# # LiveDisplay
+# PRODUCT_PACKAGES += \
+#     vendor.lineage.livedisplay@2.0-service-sdm \
+#     vendor.lineage.livedisplay@2.0-service-sysfs.motorola_sm6150
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -487,9 +487,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+# # Trust HAL
+# PRODUCT_PACKAGES += \
+#     vendor.lineage.trust@1.0-service
 
 # Update engine
 PRODUCT_PACKAGES += \
