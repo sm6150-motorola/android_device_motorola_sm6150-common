@@ -251,14 +251,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
 
-# FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    init.qti.fm.sh \
-    qcom.fmradio
+# # FM
+# PRODUCT_PACKAGES += \
+#     FM2 \
+#     libqcomfm_jni \
+#     init.qti.fm.sh \
+#     qcom.fmradio
 
-PRODUCT_BOOT_JARS += qcom.fmradio
+# PRODUCT_BOOT_JARS += qcom.fmradio
 
 # For config.fs
 PRODUCT_PACKAGES += \
@@ -521,10 +521,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libnl \
-    libwfdaac_vendor
+# # WiFi Display
+# PRODUCT_PACKAGES += \
+#     libnl \
+#     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+# PRODUCT_BOOT_JARS += \
+#     WfdCommon
