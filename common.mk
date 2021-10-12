@@ -377,9 +377,9 @@ PRODUCT_PACKAGES += \
     libchrome \
     libchrome.vendor
 
-# MotoActions
-PRODUCT_PACKAGES += \
-    MotoActions
+# # MotoActions
+# PRODUCT_PACKAGES += \
+#     MotoActions
 
 # Net
 PRODUCT_PACKAGES += \
