@@ -31,13 +31,13 @@ allow charge_only sysfs_wake_lock:file rw_file_perms;
 allow charge_only sysfs_batteryinfo:file r_file_perms;
 
 # Allow access to battery supply sysfs
-allow charge_only sysfs_battery_supply:dir r_dir_perms;
-allow charge_only sysfs_battery_supply:file r_file_perms;
-allow charge_only sysfs_battery_supply:lnk_file r_file_perms;
+allow charge_only vendor_sysfs_battery_supply:dir r_dir_perms;
+allow charge_only vendor_sysfs_battery_supply:file r_file_perms;
+allow charge_only vendor_sysfs_battery_supply:lnk_file r_file_perms;
 
 # Allow access to usb supply sysfs
-allow charge_only sysfs_usb_supply:dir r_dir_perms;
-allow charge_only sysfs_usb_supply:file r_file_perms;
+allow charge_only vendor_sysfs_usb_supply:dir r_dir_perms;
+allow charge_only vendor_sysfs_usb_supply:file r_file_perms;
 
 # Allow access to thermal sysfs
 allow charge_only sysfs_thermal:dir r_dir_perms;
@@ -48,8 +48,8 @@ allow charge_only sysfs_thermal:lnk_file r_file_perms;
 allow charge_only sysfs_power:file rw_file_perms;
 
 # Allow access to graphics sysfs
-allow charge_only sysfs_graphics:dir r_dir_perms;
-allow charge_only sysfs_graphics:file rw_file_perms;
+allow charge_only vendor_sysfs_graphics:dir r_dir_perms;
+allow charge_only vendor_sysfs_graphics:file rw_file_perms;
 
 # Read /sys/fs/pstore/console-ramoops
 # Don't worry about overly broad permissions for now, as there's

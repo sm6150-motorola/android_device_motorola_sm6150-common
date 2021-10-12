@@ -20,7 +20,7 @@ genfscon proc /sys/kernel/sched_lib_name                                        
 genfscon proc /sys/kernel/sched_lib_mask_force                                  u:object_r:proc_sched_lib_mask_cpuinfo:s0
 
 # Graphics
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display               u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display               u:object_r:vendor_sysfs_graphics:s0
 
 # LiveDisplay
 # genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display/dsi_display_acl             u:object_r:sysfs_livedisplay_tuneable:s0
@@ -28,9 +28,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display               u:object
 # genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm             u:object_r:sysfs_livedisplay_tuneable:s0
 
 # Health
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5-mmi/power_supply u:object_r:sysfs_battery_supply:s0
-genfscon sysfs /devices/platform/soc/soc:mmi_chrg_manager/power_supply/mmi_chrg_manager                                                u:object_r:sysfs_battery_supply:s0
-genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0065/power_supply/bq2597x-standalone                                           u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5-mmi/power_supply u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/soc:mmi_chrg_manager/power_supply/mmi_chrg_manager                                                u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0065/power_supply/bq2597x-standalone                                           u:object_r:vendor_sysfs_battery_supply:s0
 
 # VL53L1
 genfscon sysfs /devices/virtual/laser/stmvl53l1                                 u:object_r:vendor_sysfs_laser:s0
