@@ -27,6 +27,9 @@ $(call inherit-product, $(LOCAL_PATH)/interfaces.mk)
 # b/189477034: Bypass build time check on uses_libs until vendor fixes all their apps
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 30 28 29
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
