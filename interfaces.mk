@@ -52,3 +52,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     android.hardware.secure_element@1.1.vendor \
     android.hardware.secure_element@1.0.vendor
+
+# FP
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1.vendor
