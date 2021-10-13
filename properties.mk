@@ -94,14 +94,16 @@ PRODUCT_ODM_PROPERTIES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
-    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
+    bluetooth.hfp.client=1 \
+    ro.qualcomm.bt.hci_transport=smd \
+    persist.bluetooth.a2dp_offload.disabled=true \
     persist.vendor.qcom.bluetooth.soc=cherokee \
-    ro.bluetooth.a2dp_offload.supported=true \
-    vendor.qcom.bluetooth.soc=cherokee
+    vendor.qcom.bluetooth.soc=cherokee \
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.bluetooth.library_name=libbluetooth_qti.so \
+    ro.bluetooth.a2dp_offload.supported=false \
+    ro.bluetooth.library_name=libbluetooth.so \
+    ro.vendor.bluetooth.wipower=false \
     vendor.bluetooth.soc=cherokee
 
 # Camera

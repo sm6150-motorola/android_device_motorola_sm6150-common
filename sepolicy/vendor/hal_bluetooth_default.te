@@ -1,0 +1,2 @@
+add_hwservice(hal_bluetooth_default, hal_bt_channel_avoidance_hwservice)
+allow hal_bluetooth_default hal_bt_channel_avoidance_hwservice:hwservice_manager find;
