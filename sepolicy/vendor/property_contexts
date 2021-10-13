@@ -18,7 +18,6 @@ ro.boot.hwrev              u:object_r:moto_boot_prop:s0
 ro.boot.powerup_reason     u:object_r:moto_boot_prop:s0
 ro.boot.bl_state           u:object_r:moto_boot_prop:s0
 ro.boot.revision           u:object_r:moto_boot_prop:s0
-ro.radio.imei.sv           u:object_r:moto_boot_prop:s0
 ro.vendor.hw.              u:object_r:moto_boot_prop:s0
 ro.vendor.boot.radio       u:object_r:moto_boot_prop:s0
 ro.vendor.boot.hwrev       u:object_r:moto_boot_prop:s0
