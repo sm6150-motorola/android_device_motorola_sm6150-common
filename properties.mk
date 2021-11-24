@@ -174,7 +174,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gralloc.disable_ubwc=0
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
     debug.sf.enable_hwc_vds=1
 
 # IMS
@@ -292,9 +291,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.wcg_composition_dataspace=143261696 \
     ro.surface_flinger.protected_contents=true
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.supports_background_blur=1
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.use_phase_offsets_as_durations=1 \
