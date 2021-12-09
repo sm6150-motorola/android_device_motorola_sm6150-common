@@ -151,11 +151,11 @@ PRODUCT_COPY_FILES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl:64 \
-    android.hardware.boot@1.0-service \
-    android.hardware.boot@1.0-impl.recovery \
-    bootctrl.qcom \
-    bootctrl.qcom.recovery
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-service \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    bootctrl.sm6150 \
+    bootctrl.sm6150.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
