@@ -16,7 +16,6 @@
 
 # AB Partitions
 AB_OTA_PARTITIONS += \
-    recovery \
     product
 
 # Crypto
