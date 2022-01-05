@@ -593,7 +593,6 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 # Radio
 etc/permissions/privapp-permissions-qti.xml
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
--system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/embms.xml
 system_ext/etc/permissions/qcrilhook.xml
@@ -718,9 +717,6 @@ vendor/radio/qcril_database/upgrade/17_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/18_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/19_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/20_version_qcrildb.sql
-
-# Radio - Telephony (qti-telephony-common)
--system_ext/framework/qti-telephony-common.jar|3cc58f603913a87f9ab208a2ee353d155b9821be
 
 # Radio - IMS (APK)
 -system_ext/priv-app/ims/ims.apk|61a632c8e5cbcc4e7d112d4a30abc805f31c1d59
