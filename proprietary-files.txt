@@ -720,7 +720,7 @@ vendor/radio/qcril_database/upgrade/19_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/20_version_qcrildb.sql
 
 # Radio - IMS (APK)
--system_ext/priv-app/ims/ims.apk|61a632c8e5cbcc4e7d112d4a30abc805f31c1d59
+-system_ext/priv-app/ims/ims.apk|65be917f64f3c1d814a2e3a0c954feb12e3231e3
 
 # Radio - IMS
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
