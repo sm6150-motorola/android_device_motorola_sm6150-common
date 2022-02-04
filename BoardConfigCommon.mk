@@ -94,6 +94,7 @@ TARGET_MODULE_ALIASES += \
     wlan.ko:qca_cld3_wlan.ko
 
 # Platform
+TARGET_PRODUCT_PROP += $(VENDOR_PATH)/product.prop
 BOARD_USES_QCOM_HARDWARE := true
 QCOM_BOARD_PLATFORMS += sm6150
 TARGET_BOARD_PLATFORM := sm6150
