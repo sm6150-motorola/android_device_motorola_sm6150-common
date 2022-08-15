@@ -743,7 +743,7 @@ vendor/radio/qcril_database/upgrade/36_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/37_version_qcrildb.sql
 
 # Radio - IMS (APK)
--system_ext/priv-app/ims/ims.apk|61a632c8e5cbcc4e7d112d4a30abc805f31c1d59
+-system_ext/priv-app/ims/ims.apk|2fbaabee440315379ad284c38ebe2a006db50216
 
 # Radio - Moto Telephony Framework
 framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
