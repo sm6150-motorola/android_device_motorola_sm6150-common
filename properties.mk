@@ -102,7 +102,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.bluetooth.library_name=libbluetooth_qti.so \
     vendor.bluetooth.soc=cherokee
 
 # Camera
