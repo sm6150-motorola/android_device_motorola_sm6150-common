@@ -1,1 +1,1 @@
-get_prop(vendor_wcnss_service, moto_boot_prop)
+get_prop(vendor_wcnss_service, vendor_mot_boot_prop)

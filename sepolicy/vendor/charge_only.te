@@ -92,4 +92,4 @@ allow charge_only init:unix_stream_socket connectto;
 get_prop(charge_only, powerctl_prop)
 set_prop(charge_only, powerctl_prop)
 get_prop(charge_only, vendor_display_prop)
-get_prop(charge_only, moto_boot_prop)
+get_prop(charge_only, vendor_mot_boot_prop)

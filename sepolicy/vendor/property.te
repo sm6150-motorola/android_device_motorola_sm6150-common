@@ -1,13 +1,13 @@
 # Motorola
-vendor_public_prop(moto_boot_prop)
-vendor_public_prop(moto_fingerprint_prop)
-vendor_public_prop(moto_touch_prop)
+vendor_public_prop(vendor_mot_boot_prop)
+vendor_public_prop(vendor_mot_fingerprint_prop)
+vendor_public_prop(vendor_mot_touch_prop)
 
 # AOV
 vendor_internal_prop(vendor_aov_prop)
 
 # Power
-vendor_internal_prop(power_prop)
+vendor_internal_prop(vendor_power_prop)
 
 # FM Radio
 vendor_public_prop(vendor_fm_prop)
