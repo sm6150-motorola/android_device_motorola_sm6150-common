@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from Hanoip S2RI32.32-20-7
+# All unpinned blobs below are extracted from Hanoip S2RI32.32-20-9-9-2
 
 # ADSP
 vendor/bin/adsprpcd
