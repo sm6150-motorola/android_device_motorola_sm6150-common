@@ -344,7 +344,8 @@ PRODUCT_PACKAGES += \
 # Moto hardware
 PRODUCT_PACKAGES += \
     MotoActions \
-    MotoCommonOverlay
+    MotoCommonOverlay \
+    ApertureOverlayParker
 
 # Net
 PRODUCT_PACKAGES += \
